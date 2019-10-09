@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X=UA-Compatible" content="ie=edge" />
+	<title>Nav Bar</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			font-display: sans-serif;
+			 margin: 0;
+			  font-family: Arial, Helvetica, sans-serif;
+			  background-color: #5b78c7;
+		}
+
+		nav{
+			height: 12vh;
+			background: #5b78c7;
+		}
+		.nav-links{
+			display: flex;
+			list-style: none;
+			width: 100%;
+			/*background: lightcoral;*/
+			height: 100%;
+			justify-content: space-around;
+			align-items: center;
+			margin-left: auto;
+		}
+		.nav-links li a{
+			font-weight: bold;
+			color: white;
+			text-decoration: none;
+			font-size: 26px;
+		}
+		.nav-links li a:hover{
+			color: black;
+			background-color: blue;
+			padding: 10px;
+		}
+		.landing{
+			height: 91vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		/*.landing h1{
+			margin: 100px;
+			font-size: 50px;
+			color: #ae5fce;
+		}*/
+		.img{
+			height: 500px;
+			width: 500px;
+			}
+		.pa1{
+			font-size: 35px;
+			background-color:  #5b78c7;
+			padding-left: 45%;
+			color: white;
+		}
+		.pa2{
+			font-size: 20px;
+			background-color:  #5b78c7;
+			padding-left: 48%;
+			color: white;
+		}
+
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+img {
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+  border: 10px solid;
+  border-color: white;
+  z-index: 10;
+}
+img:hover{
+  -webkit-filter: grayscale(0%); 
+  filter: grayscale(0%);
+  border-color: black;
+}
+#con{
+	width: 100%;
+	background-color: black;
+	padding: 5%;
+	padding-bottom: 10%;
+}
+.pa3{
+	text-align: center;
+	font-size: 2vw;
+	color: orange;
+	padding-bottom: 5%;
+}
+.div1{
+	margin-left: 23%;
+	padding-right: 10%;
+	float: left;
+	color: white;
+	font-size: 1vw;
+}
+.div2{
+	float: left;
+	color: white;
+	font-size: 1vw;
+	padding-right: 10%;
+}
+.div3{
+	float: left;
+	color: white;
+	font-size: 1vw;
+}
+.middle{
+	background-color: black;
+	padding-bottom: 2%;
+	justify-content: center;
+	/*position: absolute;*/
+	/*top: 90%;*/
+	transform: translateY(-30%);
+	width: 100%;
+	text-align:center;
+
+}
+.btn
+{
+display:inline-block;
+width: 80px;
+height: 80px;
+background:#f1f1f1;
+margin:10px;
+border-radius:30%;
+
+
+}
+.btn i{
+	line-height:80px;
+	font-size:30px;
+	
+}
+.btn:hover i{
+	transform :scale(1.3);
+}
+
+
+
+		@media screen and (max-width: 800px) {
+
+			.column {
+					  -ms-flex: 50%; /* IE 10 */
+					  flex: 50%;
+					  padding: 0 4px;
+					}
+
+
+			.line{
+				width: 30px;
+				height: 3px;
+				background: white;
+				margin: 5px;
+			}
+			nav {
+				position: relative;
+			}
+			.hamburger {
+				position: absolute;
+				cursor: pointer;
+				right: 5%;
+				top: 50%;
+				transform: translate(-5%, -50%);
+				z-index: 21;
+			}
+
+			.nav-links {
+				position: fixed;
+				background: #5b78c7;
+				height: 100vh;
+				width: 100%;
+				flex-direction: column;
+				/*display: none;*/
+				clip-path: circle(100px at 90% -10%);
+				-webkit-clip-path: circle(100px at 90% -10%);
+				transition: all 0.5s ease-out;
+				pointer-events: none;
+				z-index: 20;
+			}
+			.nav-links.open {
+				clip-path: circle(1100px at 90% -10%);
+				-webkit-clip-path: circle(1100px at 90% -10%);
+				pointer-events: all;
+			}
+			/*.landing {
+				flex-direction: column;
+			}*/
+			.nav-links li {
+				opacity: 0;
+			}
+			.nav-linls li a {
+				font-size: 25px;
+			}
+			.nav-links li:nth-child(1){
+				transition: all 0.5s ease 0.2s;
+			}
+			.nav-links li:nth-child(2){
+				transition: all 0.5s ease 0.4s;
+			}
+			.nav-links li:nth-child(3){
+				transition: all 0.5s ease 0.6s;
+			}
+			.nav-links li:nth-child(4){
+				transition: all 0.5s ease 0.8s;
+			}
+			li.fade {
+				opacity: 1;
+			}
+			.img{
+			height: 300px;
+			width: 300px;
+			}
+			/*.landing h1{
+			margin: 80px;
+			font-size: 40px;
+			color: red;
+		}*/
+		.pa1{
+			padding-left: 30%;
+		}
+		.pa2{
+			padding-left: 35%;
+		}
+		.pa3{
+			text-align: center;
+			font-size: 3vw;
+			color: orange;
+			padding-bottom: 5%;
+		}
+		.div1{
+			margin-left: 15%;
+			padding-right: 10%;
+			float: left;
+			color: white;
+			font-size: 1.7vw;
+		}
+		.div2{
+			float: left;
+			color: white;
+			font-size: 1.7vw;
+			padding-right: 10%;
+		}
+		.div3{
+			float: left;
+			color: white;
+			font-size: 1.7vw;
+		}
+
+		}
+		
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<ul class="nav-links">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Login/Sinup</a></li>
+			<li><a href="#">Contact</a></li>
+			
+		</ul>
+	</nav>
+	<p class="pa1">PHOTOWALL</p>
+	<p class="pa2">Make Memories</p>
+	<script src="app.js"></script>
+	<section>
+		<div class="row"> 
+  <div class="column">
+    <img src="ven/1.jpg" style="width:100%">
+    <img src="ven/1.jpg" style="width:100%">
+    <img src="ven/3.jpg" style="width:100%">
+    <img src="ven/IMG-20181005-WA0002.jpg" style="width:100%">
+    <img src="ven/19.jpg" style="width:100%">
+    <img src="ven/IMG-527f5d6c.jpg" style="width:100%">
+    <img src="ven/7.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="ven/IMG-20190225-WA0007.jpg" style="width:100%">
+    <img src="ven/17.jpg" style="width:100%">
+    <img src="ven/24.jpg" style="width:100%">
+    <img src="ven/22.jpg" style="width:100%">
+    <img src="ven/4.jpg" style="width:100%">
+    <img src="ven/31.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="ven/20.jpg" style="width:100%">
+    <img src="ven/21.jpg" style="width:100%">
+    <img src="ven/14.jpg" style="width:100%">
+    <img src="ven/23.jpg" style="width:100%">
+    <img src="ven/25.jpg" style="width:100%">
+  <!--   <img src="ven/26.jpg" style="width:100%">
+    <img src="ven/27.jpg" style="width:100%"> -->
+  </div>
+  <div class="column">
+    <img src="ven/7.jpg" style="width:100%">
+    <img src="ven/8.jpg" style="width:100%">
+    <img src="ven/9.jpg" style="width:100%">
+    <img src="ven/10.jpg" style="width:100%">
+    <img src="ven/11.jpg" style="width:100%">
+    <!-- <img src="ven/12.jpg" style="width:100%"> -->
+  </div>
+</div>
+	</section>
+	<section id="con">
+		<p class="pa3">CONTACT US</p>
+		<div class="div1">
+			<i class="fab fa-map-marker"></i>
+			<p>Lovely Professional <br>University,<br>Pagwara,Punjab-144411</p>
+		</div>
+		<div class="div2">
+			<p>photowall2000@gmail.com</p>
+		</div>
+		<div class="div3">
+			<p>+91-1824-404441<br>+91-1824-510311</p>
+		</div>
+
+	</section>
+<!-- 	<center>
+	<div class="middle">
+	<a class="btn" href ="*">
+	<i class="fab fa-facebook-f"></i>
+	</a>
+	<a   class="btn" href ="*">
+	<i class="fab fa-twitter"></i>
+	</a>
+	<a  class="btn"  href ="*">
+	<i class="fab fa-instagram"></i>
+	</a>
+	<a  class="btn"  href ="*">
+	<i class="fab fa-youtube"></i>
+	</a>
+	<a  class="btn" href ="*">
+	<i class="fab fa-google"></i>
+	</a>
+	</div></center> -->
+</body>
+</html>
